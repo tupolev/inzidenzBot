@@ -1,0 +1,10 @@
+{
+  "general": {},
+  "twitter" : {
+    "consumer_key": "test",
+    "consumer_secret": "test",
+    "access_token_key": "test",
+    "access_token_secret": "test",
+    "input_encoding": "utf-8"
+  }
+}

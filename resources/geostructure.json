@@ -1,0 +1,31 @@
+{
+  "countries": [
+    {
+      "name": "Deutschland",
+      "states": [
+        {
+          "internal": "BRANDENBURG",
+          "label": "Brandenburg",
+          "provinces": [
+            {
+              "internal": "OBERHAVEL",
+              "label": "Oberhavel",
+              "reftype": "Landkreis"
+            }
+          ]
+        },
+        {
+          "internal": "BERLIN",
+          "label": "Berlin",
+          "provinces": [
+            {
+              "internal": "Berlin Reinickendorf",
+              "label": "Berlin Reinickendorf",
+              "reftype": "Bezirk"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
