@@ -2,20 +2,27 @@
 
 namespace App;
 
+use Abraham\TwitterOAuth\TwitterOAuth;
 use App\Config\DAO\ArcGisRkiResultDataRow;
 use App\Config\DAO\Config;
-use TwitterAPIExchange;
 
 class App {
     private Config $config;
     private ArcGisRkiClient $arcGisRkiClient;
-    private TwitterAPIExchange $twitter;
+    private TwitterOAuth $twitter;
+    private ImageCreator $imageCreator;
 
-    public function __construct(Config $config, ArcGisRkiClient $arcGisRkiClient, TwitterAPIExchange $twitter)
+    public function __construct(
+        Config $config,
+        ArcGisRkiClient $arcGisRkiClient,
+        TwitterOAuth $twitter,
+        ImageCreator $imageCreator
+    )
     {
         $this->config = $config;
         $this->arcGisRkiClient = $arcGisRkiClient;
         $this->twitter = $twitter;
+        $this->imageCreator = $imageCreator;
     }
 
     final public function run(): void
@@ -56,19 +63,24 @@ class App {
                 ];
 
                 //first approach: a tweet per state with province list
-                $this->tweet($countryResults[$stateInternal]);
+
+                $this->tweetImage(
+                    $this->imageCreator->renderImageFromStateData($countryResults[$stateInternal])
+                );
             }
 
         }
     }
 
-    private function tweet(array $stateInternal): void
+    private function tweetImage(string $imageFullPath, string $status = ""): array
     {
-        $url = "https://api.twitter.com/1.1/statuses/update.json";
-        $requestMethod = "POST";
-        $postfields = ["status" => self::renderTweet($stateInternal)];
-//        file_put_contents(__DIR__ . "/../tmp.twitt", self::renderTweet($stateInternal));
-        $this->twitter->buildOauth($url, $requestMethod)->setPostfields($postfields)->performRequest();
+        $media1 = $this->twitter->upload('media/upload', ['media' => $imageFullPath]);
+        $parameters = [
+            'status' => $status,
+            'media_ids' => implode(',', [$media1->media_id_string])
+        ];
+
+        return $this->twitter->post('statuses/update', $parameters);
     }
 
     private static function renderTweet(array $stateData): string
