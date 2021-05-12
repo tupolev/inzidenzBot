@@ -3,7 +3,6 @@
 namespace App;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
-use App\Config\DAO\ArcGisRkiResultDataRow;
 use App\Config\DAO\Config;
 
 class App {
@@ -29,7 +28,7 @@ class App {
     {
         $config = $this->config;
         $arcGisRkiClient = $this->arcGisRkiClient;
-
+        //TODO complete geostructure file with all states and provinces
         foreach ($config->getGeoStructure()->getStructure()["countries"] as $country)
         {
             $countryName = $country["name"];
@@ -62,11 +61,10 @@ class App {
                     "data" => $stateResults
                 ];
 
-                //first approach: a tweet per state with province list
-
-                $this->tweetImage(
-                    $this->imageCreator->renderImageFromStateData($countryResults[$stateInternal])
-                );
+                $imagePath = $this->imageCreator->renderImageFromStateData($countryResults[$stateInternal]);
+                if (getenv('DEBUG') !== "true") {
+                    $this->tweetImage($imagePath);
+                }
             }
 
         }
@@ -81,21 +79,5 @@ class App {
         ];
 
         return $this->twitter->post('statuses/update', $parameters);
-    }
-
-    private static function renderTweet(array $stateData): string
-    {
-        $tweet =  $stateData["label"] . "\n";
-        $tweet .=  "Land\tWert\tLetzte\tAktualisierung\n";
-        $tweet .= "====\t====\t======\t==============\n";
-        foreach ($stateData["data"] as $province) {
-            /** @var ArcGisRkiResultDataRow */
-            $provinceData = $province["data"];
-            $tweet .= $province["label"] . "\t"
-                . ceil($provinceData->getInzidenzValue()). "\t"
-                . substr($provinceData->getLastUpdated(), 0, 5) . "\n";
-        }
-
-        return $tweet;
     }
 }

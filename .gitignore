@@ -3,3 +3,6 @@
 vendor/
 composer.phar
 /resources/config.json
+.vagrant/
+out/images/*
+out/*.*

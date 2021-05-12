@@ -25,6 +25,6 @@ $config = ConfigLoader::load();
     new ImageCreator(
         new HtmlRenderer(),
         new PdfRenderer(),
-        new ImageRenderer()
+        new ImageRenderer(__DIR__ . '/out/images')
     )
 ))->run();

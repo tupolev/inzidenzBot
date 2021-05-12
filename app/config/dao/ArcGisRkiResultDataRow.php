@@ -10,13 +10,33 @@ class ArcGisRkiResultDataRow
     private string $provinceInternal;
     private string $inzidenzValue;
     private string $lastUpdated;
+    private string $reftype;
 
-    final public function __construct(string $stateInternal, string $provinceInternal, string $inzidenzValue, string $lastUpdated)
+    final public function __construct(string $stateInternal, string $provinceInternal, string $inzidenzValue, string $lastUpdated, string $reftype)
     {
         $this->stateInternal = $stateInternal;
         $this->provinceInternal = $provinceInternal;
         $this->inzidenzValue = $inzidenzValue;
         $this->lastUpdated = $lastUpdated;
+        $this->reftype = $reftype;
+    }
+
+    /**
+     * @return string
+     */
+    final public function getReftype(): string
+    {
+        return $this->reftype;
+    }
+
+    /**
+     * @param string $reftype
+     * @return ArcGisRkiResultDataRow
+     */
+    final public function setReftype(string $reftype): ArcGisRkiResultDataRow
+    {
+        $this->reftype = $reftype;
+        return $this;
     }
 
     /**

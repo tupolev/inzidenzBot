@@ -33,9 +33,15 @@ class ImageCreator
 
     final public function renderImageFromStateData(array $stateResultsData): string
     {
-        $html = $this->htmlRenderer->fromStateResultsData($stateResultsData);
-        $pdfPath = $this->pdfRenderer->generatePdfFromHtml($html);
-
-        return  $this->imageRenderer->generateFromPdf($pdfPath);
+        file_put_contents(
+            __DIR__.'/../out/' . $stateResultsData["internal"] . '.html',
+            $this->htmlRenderer::fromStateResultsData($stateResultsData)
+        );
+        return  $this->imageRenderer->generatePngFromPdfBuffer(
+            $this->pdfRenderer->generatePdfBufferFromHtml(
+                $this->htmlRenderer::fromStateResultsData($stateResultsData)
+            ),
+            $stateResultsData["internal"],
+        );
     }
 }

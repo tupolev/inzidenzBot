@@ -39,7 +39,7 @@ class ArcGisRkiClient
         $inzidenzValue = $jp->find('$.features[0].attributes.cases7_per_100k')->first();
         $lastUpdated = $jp->find('$.features[0].attributes.last_update')->first();
 
-        return new ArcGisRkiResultDataRow($stateInternal, $provinceInternal, $inzidenzValue, $lastUpdated);
+        return new ArcGisRkiResultDataRow($stateInternal, $provinceInternal, $inzidenzValue, $lastUpdated, $reftype);
     }
 
     private function runQuery(string $stateInternal, string $provinceInternal, string $reftype): array
