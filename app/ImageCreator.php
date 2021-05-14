@@ -13,8 +13,8 @@ use App\render\PdfRenderer;
  * The basic process is:
  *      rendering html from the input state results list,
  *      converting html to pdf
- *      converting pdf to png
- *      returning png path
+ *      converting pdf to jpeg
+ *      returning jpeg path
  * @package App
  */
 class ImageCreator
@@ -33,10 +33,6 @@ class ImageCreator
 
     final public function renderImageFromStateData(array $stateResultsData): string
     {
-        file_put_contents(
-            __DIR__.'/../out/' . $stateResultsData["internal"] . '.html',
-            $this->htmlRenderer::fromStateResultsData($stateResultsData)
-        );
         return  $this->imageRenderer->generatePngFromPdfBuffer(
             $this->pdfRenderer->generatePdfBufferFromHtml(
                 $this->htmlRenderer::fromStateResultsData($stateResultsData)

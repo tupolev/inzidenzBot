@@ -10,12 +10,6 @@ class Config
     private GeoStructure $geoStructure;
     private Twitter $twitter;
 
-    /**
-     * Config constructor.
-     * @param General $general
-     * @param General $geoStructure
-     * @param Twitter $twitter
-     */
     public function __construct(General $general, GeoStructure $geoStructure, Twitter $twitter)
     {
         $this->general = $general;
