@@ -1,0 +1,16 @@
+RIK/Arcgis home:
+  https://npgeo-corona-npgeo-de.hub.arcgis.com/
+
+RIK/Arcgis Datahub COVID19:
+  https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0/data?geometry=-30.695%2C46.211%2C52.713%2C55.839&orderBy=GEN
+
+Fields used:
+  cases7_per_100k
+  last_update
+  GEN: {Bundesland, Landkreis, Kreisfreie Stadt, Bezirk}
+  cases7_bl_per_100k: Type Bezirk has no unified city. Use this field in the first Bezirk result for the value by Bundesland.
+
+Landkreise and Kreisfreie Städte:
+  https://de.wikipedia.org/wiki/Liste_der_Landkreise_in_Deutschland
+  https://de.wikipedia.org/wiki/Liste_der_kreisfreien_St%C3%A4dte_in_Deutschland
+
