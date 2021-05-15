@@ -43,28 +43,24 @@ class App {
                 $stateResults = [];
 
                 if ($stateInternal === "BERLIN") {
-                    foreach ($state["provinces"] as $province)
-                    {
-                        $provinceInternal = $province["internal"];
-                        $provinceLabel = $province["label"];
-                        $reftype = "Kreisfreie Stadt";
+                    $province = $state["provinces"][0];
+                    $provinceInternal = $province["internal"];
+                    $reftype = "Kreisfreie Stadt";
 
-                        $stateResults[$provinceInternal]= [
-                            "internal" => "BERLIN",
-                            "label" => "Berlin",
-                            "reftype" => $reftype,
-                            //"Berlin", "Berlin Mitte", "bezirk"
-                            "data" => $arcGisRkiClient->getParsedDataFromBezirkQuery($stateInternal, $provinceInternal),
-                        ];
-                        break;
-                    }
+                    $stateResults[$provinceInternal]= [
+                        "internal" => "BERLIN",
+                        "label" => "Berlin",
+                        "reftype" => $reftype,
+                        //"Berlin", "Berlin Mitte", "bezirk"
+                        "data" => $arcGisRkiClient->getParsedDataFromBezirkQuery($stateInternal, $provinceInternal),
+                    ];
                 } else {
                     foreach ($state["provinces"] as $province)
                     {
                         $provinceInternal = $province["internal"];
                         $provinceLabel = $province["label"];
                         $reftype = $province["reftype"];
-                        printf(json_encode([$provinceInternal, $provinceLabel, $reftype]) . "\n");
+                        self::log($provinceLabel, $reftype);
                         $stateResults[$provinceInternal]= [
                             "internal" => $provinceInternal,
                             "label" => $provinceLabel,
@@ -80,23 +76,31 @@ class App {
                     "data" => $stateResults
                 ];
 
-                $imagePath = $this->imageCreator->renderImageFromStateData($countryResults[$stateInternal]);
-                if (getenv('DEBUG') !== "true") {
-                    $this->tweetImage($imagePath);
-                }
+                $imagesPath = $this->imageCreator->renderImageFromStateData($countryResults[$stateInternal]);
+                $this->tweetImages($imagesPath, 'Covid19 7-Tage-Inzidenz in ' . $stateLabel . ' (' . date("j\.n\.Y") . ')');
             }
 
         }
+        self::log("Process", "finished");
     }
 
-    private function tweetImage(string $imageFullPath, string $status = ""): array
+    private function tweetImages(array $imageFullPaths, string $status = ""): void
     {
-        $media1 = $this->twitter->upload('media/upload', ['media' => $imageFullPath]);
+        $medias = [];
+        foreach ($imageFullPaths as $index => $imageFullPath) {
+            $media = $this->twitter->upload('media/upload', ['media' => $imageFullPath]);
+            $medias[]= $media->media_id_string;
+        }
         $parameters = [
             'status' => $status,
-            'media_ids' => implode(',', [$media1->media_id_string])
+            'media_ids' => implode(',', $medias)
         ];
 
-        return $this->twitter->post('statuses/update', $parameters);
+        $this->twitter->post('statuses/update', $parameters);
+    }
+
+    private static function log(string $provinceLabel, string $reftype): void
+    {
+        printf("%s: %s, %s\n", date("j-n-Y H:i:s"), $provinceLabel, $reftype);
     }
 }

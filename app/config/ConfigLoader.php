@@ -11,7 +11,7 @@ use App\Config\DAO\Twitter;
 
 class ConfigLoader
 {
-    const CONFIG_FILE_PATH = __DIR__ . "/../../resources/config.json";
+    const CONFIG_FILE_PATH = __DIR__ . "/../../resources/config.dev.json";
     const GEOSTRUCTURE_FILE_PATH = __DIR__ . "/../../resources/geostructure.limited.json";
     const AS_ASSOC_ARRAY = true;
 

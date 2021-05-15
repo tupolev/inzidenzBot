@@ -31,9 +31,14 @@ class ImageCreator
         $this->imageRenderer = $imageRenderer;
     }
 
-    final public function renderImageFromStateData(array $stateResultsData): string
+    /**
+     * @param array $stateResultsData
+     * @return string[]
+     * @throws \ImagickException
+     */
+    final public function renderImageFromStateData(array $stateResultsData): array
     {
-        return  $this->imageRenderer->generatePngFromPdfBuffer(
+        return  $this->imageRenderer->generateImagesFromPdfBuffer(
             $this->pdfRenderer->generatePdfBufferFromHtml(
                 $this->htmlRenderer::fromStateResultsData($stateResultsData)
             ),
