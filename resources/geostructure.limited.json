@@ -24,6 +24,16 @@
               "reftype": "Landkreis"
             },
             {
+              "internal": "BRANDENBURG AN DER HAVEL",
+              "label": "Brandenburg an der Havel",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "COTTBUS",
+              "label": "Cottbus",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
               "internal": "DAHME-SPREEWALD",
               "label": "Dahme-Spreewald",
               "reftype": "Landkreis"
@@ -32,6 +42,11 @@
               "internal": "ELBE-ELSTER",
               "label": "Elbe-Elster",
               "reftype": "Landkreis"
+            },
+            {
+              "internal": "FRANKFURT (ODER)",
+              "label": "Frankfurt (Oder)",
+              "reftype": "Kreisfreie Stadt"
             },
             {
               "internal": "HAVELLAND",
@@ -69,6 +84,11 @@
               "reftype": "Landkreis"
             },
             {
+              "internal": "POTSDAM",
+              "label": "Potsdam",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
               "internal": "PRIGNITZ",
               "label": "Prignitz",
               "reftype": "Landkreis"
@@ -87,25 +107,486 @@
               "internal": "UCKERMARK",
               "label": "Uckermark",
               "reftype": "Landkreis"
+            }
+          ]
+        },
+        {
+          "internal": "BAYERN",
+          "label": "Bayern",
+          "provinces": [
+            {
+              "internal": "ALTöTTING",
+              "label": "Altötting",
+              "reftype": "Landkreis"
             },
             {
-              "internal": "BRANDENBURG AN DER HAVEL",
-              "label": "Brandenburg an der Havel",
+              "internal": "AMBERG",
+              "label": "Amberg",
               "reftype": "Kreisfreie Stadt"
             },
             {
-              "internal": "COTTBUS",
-              "label": "Cottbus",
+              "internal": "AMBERG-SULZBACH",
+              "label": "Amberg-Sulzbach",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ANSBACH",
+              "label": "Ansbach",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ANSBACH",
+              "label": "Ansbach",
               "reftype": "Kreisfreie Stadt"
             },
             {
-              "internal": "FRANKFURT (ODER)",
-              "label": "Frankfurt (Oder)",
+              "internal": "ASCHAFFENBURG",
+              "label": "Aschaffenburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ASCHAFFENBURG",
+              "label": "Aschaffenburg",
               "reftype": "Kreisfreie Stadt"
             },
             {
-              "internal": "POTSDAM",
-              "label": "Potsdam",
+              "internal": "AUGSBURG",
+              "label": "Augsburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "AUGSBURG",
+              "label": "Augsburg",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "BAD KISSINGEN",
+              "label": "Bad Kissingen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "BAD TöLZ-WOLFRATSHAUSEN",
+              "label": "Bad Tölz-Wolfratshausen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "BAMBERG",
+              "label": "Bamberg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "BAMBERG",
+              "label": "Bamberg",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "BAYREUTH",
+              "label": "Bayreuth",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "BAYREUTH",
+              "label": "Bayreuth",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "BERCHTESGADENER LAND",
+              "label": "Berchtesgadener Land",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "CHAM",
+              "label": "Cham",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "COBURG",
+              "label": "Coburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "COBURG",
+              "label": "Coburg",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "DACHAU",
+              "label": "Dachau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "DEGGENDORF",
+              "label": "Deggendorf",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "DILLINGEN a.d. DONAU",
+              "label": "Dillingen a.d. Donau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "DINGOLFING-LANDAU",
+              "label": "Dingolfing-Landau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "DONAU-RIES",
+              "label": "Donau-Ries",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "EBERSBERG",
+              "label": "Ebersberg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "EICHSTäTT",
+              "label": "Eichstätt",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ERDING",
+              "label": "Erding",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ERLANGEN",
+              "label": "Erlangen",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "ERLANGEN-HöCHSTADT",
+              "label": "Erlangen-Höchstadt",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FORCHHEIM",
+              "label": "Forchheim",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FREISING",
+              "label": "Freising",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FREYUNG-GRAFENAU",
+              "label": "Freyung-Grafenau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FüRSTENFELDBRUCK",
+              "label": "Fürstenfeldbruck",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FüRTH",
+              "label": "Fürth",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "FüRTH",
+              "label": "Fürth",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "GARMISCH-PARTENKIRCHEN",
+              "label": "Garmisch-Partenkirchen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "GüNZBURG",
+              "label": "Günzburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "HAßBERGE",
+              "label": "Haßberge",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "HOF",
+              "label": "Hof",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "HOF",
+              "label": "Hof",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "INGOLSTADT",
+              "label": "Ingolstadt",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "KAUFBEUREN",
+              "label": "Kaufbeuren",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "KELHEIM",
+              "label": "Kelheim",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "KEMPTEN (ALLGäU)",
+              "label": "Kempten (Allgäu)",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "KITZINGEN",
+              "label": "Kitzingen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "KRONACH",
+              "label": "Kronach",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "KULMBACH",
+              "label": "Kulmbach",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "LANDSBERG AM LECH",
+              "label": "Landsberg am Lech",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "LANDSHUT",
+              "label": "Landshut",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "LANDSHUT",
+              "label": "Landshut",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "LICHTENFELS",
+              "label": "Lichtenfels",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "LINDAU (BODENSEE)",
+              "label": "Lindau (Bodensee)",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MAIN-SPESSART",
+              "label": "Main-Spessart",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MEMMINGEN",
+              "label": "Memmingen",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "MIESBACH",
+              "label": "Miesbach",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MILTENBERG",
+              "label": "Miltenberg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MüHLDORF A. INN",
+              "label": "Mühldorf a. Inn",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MüNCHEN",
+              "label": "München",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "MüNCHEN",
+              "label": "München",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "NEU-ULM",
+              "label": "Neu-Ulm",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NEUBURG-SCHROBENHAUSEN",
+              "label": "Neuburg-Schrobenhausen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NEUMARKT I.D. OPF.",
+              "label": "Neumarkt i.d. OPf.",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NEUSTADT A.D. AISCH-BAD WINDSHEIM",
+              "label": "Neustadt a.d. Aisch-Bad Windsheim",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NEUSTADT A.D. WALDNAAB",
+              "label": "Neustadt a.d. Waldnaab",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NüRNBERGER LAND",
+              "label": "Nürnberger Land",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "NüRNBERG",
+              "label": "Nürnberg",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "OBERALLGäU",
+              "label": "Oberallgäu",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "OSTALLGäU",
+              "label": "Ostallgäu",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "PASSAU",
+              "label": "Passau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "PASSAU",
+              "label": "Passau",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "PFAFFENHOFEN A.D. ILM",
+              "label": "Pfaffenhofen a.d. Ilm",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "REGEN",
+              "label": "Regen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "REGENSBURG",
+              "label": "Regensburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "REGENSBURG",
+              "label": "Regensburg",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "RHöN-GRABFELD",
+              "label": "Rhön-Grabfeld",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ROSENHEIM",
+              "label": "Rosenheim",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ROSENHEIM",
+              "label": "Rosenheim",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "ROTH",
+              "label": "Roth",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "ROTTAL-INN",
+              "label": "Rottal-Inn",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "SCHWABACH",
+              "label": "Schwabach",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "SCHWANDORF",
+              "label": "Schwandorf",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "SCHWEINFURT",
+              "label": "Schweinfurt",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "SCHWEINFURT",
+              "label": "Schweinfurt",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "STARNBERG",
+              "label": "Starnberg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "STRAUBING",
+              "label": "Straubing",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "STRAUBING-BOGEN",
+              "label": "Straubing-Bogen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "TIRSCHENREUTH",
+              "label": "Tirschenreuth",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "TRAUNSTEIN",
+              "label": "Traunstein",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "UNTERALLGäU",
+              "label": "Unterallgäu",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "WEIDEN I.D. OPF.",
+              "label": "Weiden i.d. Opf.",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "WEILHEIM-SCHONGAU",
+              "label": "Weilheim-Schongau",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "WEIßENBURG-GUNZENHAUSEN",
+              "label": "Weißenburg-Gunzenhausen",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "WUNSIEDEL I. FICHTELGEBIRGE",
+              "label": "Wunsiedel i. Fichtelgebirge",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "WüRZBURG",
+              "label": "Würzburg",
+              "reftype": "Landkreis"
+            },
+            {
+              "internal": "WüRZBURG",
+              "label": "Würzburg",
               "reftype": "Kreisfreie Stadt"
             }
           ]

@@ -24,6 +24,16 @@
               "reftype": "Landkreis"
             },
             {
+              "internal": "BRANDENBURG AN DER HAVEL",
+              "label": "Brandenburg an der Havel",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
+              "internal": "COTTBUS",
+              "label": "Cottbus",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
               "internal": "DAHME-SPREEWALD",
               "label": "Dahme-Spreewald",
               "reftype": "Landkreis"
@@ -32,6 +42,11 @@
               "internal": "ELBE-ELSTER",
               "label": "Elbe-Elster",
               "reftype": "Landkreis"
+            },
+            {
+              "internal": "FRANKFURT (ODER)",
+              "label": "Frankfurt (Oder)",
+              "reftype": "Kreisfreie Stadt"
             },
             {
               "internal": "HAVELLAND",
@@ -69,6 +84,11 @@
               "reftype": "Landkreis"
             },
             {
+              "internal": "POTSDAM",
+              "label": "Potsdam",
+              "reftype": "Kreisfreie Stadt"
+            },
+            {
               "internal": "PRIGNITZ",
               "label": "Prignitz",
               "reftype": "Landkreis"
@@ -87,26 +107,6 @@
               "internal": "UCKERMARK",
               "label": "Uckermark",
               "reftype": "Landkreis"
-            },
-            {
-              "internal": "BRANDENBURG AN DER HAVEL",
-              "label": "Brandenburg an der Havel",
-              "reftype": "Kreisfreie Stadt"
-            },
-            {
-              "internal": "COTTBUS",
-              "label": "Cottbus",
-              "reftype": "Kreisfreie Stadt"
-            },
-            {
-              "internal": "FRANKFURT (ODER)",
-              "label": "Frankfurt (Oder)",
-              "reftype": "Kreisfreie Stadt"
-            },
-            {
-              "internal": "POTSDAM",
-              "label": "Potsdam",
-              "reftype": "Kreisfreie Stadt"
             }
           ]
         },

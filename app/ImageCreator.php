@@ -19,7 +19,7 @@ use App\render\PdfRenderer;
  */
 class ImageCreator
 {
-
+    const USE_MULTI_IMAGE = true;
     public function __construct(
         HtmlRenderer $htmlRenderer,
         PdfRenderer $pdfRenderer,
@@ -38,6 +38,7 @@ class ImageCreator
                 $this->htmlRenderer::fromStateResultsData($stateResultsData)
             ),
             $stateResultsData["internal"],
+            self::USE_MULTI_IMAGE
         );
     }
 }

@@ -16,8 +16,9 @@ class ImageRenderer
         $this->imageDirectory = $imageDirectory;
     }
 
-    final public function generatePngFromPdfBuffer(string $pdfBuffer, string $filetitle): string
+    final public function generatePngFromPdfBuffer(string $pdfBuffer, string $filetitle, bool $multiImage = false): string
     {
+        $filename = $this->imageDirectory . '/' . $filetitle.'.jpg';
         $im = new imagick();
         $im->setResolution(350,350);
         $im->readImageBlob($pdfBuffer);
@@ -26,12 +27,22 @@ class ImageRenderer
         $im->setCompressionQuality(90);
         $im->setCompression(0);
         $im->setAntiAlias(true);
-        $im->resetIterator();
-        $jointIm = $im->appendImages(true);
-        $filename = $this->imageDirectory . '/' . $filetitle.'.jpg';
-        $jointIm->writeImage($filename);
-        $jointIm->clear();
-        $jointIm->destroy();
+
+        if ($multiImage) {
+            $filename = $this->imageDirectory . '/' . $filetitle . '_%NUMPAGE%' . '.jpg';
+            foreach($im as $i => $im)
+            {
+                $im->writeImage(str_replace('%NUMPAGE%', ($i+1), $filename));
+            }
+            $im->clear();
+        } else {
+            $im->resetIterator();
+            $jointIm = $im->appendImages(true);
+            $jointIm->writeImage($filename);
+            $jointIm->clear();
+            $jointIm->destroy();
+        }
+
         $im->clear();
         $im->destroy();
 
